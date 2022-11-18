@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GalleryDemo</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="ok">OK</string>
+    <string name="gallery">Gallery</string>
+</resources>

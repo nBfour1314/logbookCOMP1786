@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/inputData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp"
+            android:layout_alignParentStart="true"
+            app:cardElevation="8dp" >
+
+            <EditText
+                android:id="@+id/txtURL"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:lines="1"
+                android:maxLines="1"
+                android:textSize="18sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:hint="Enter image URL"
+                android:inputType="text"
+                tools:ignore="Autofill,HardcodedText,TextFields" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@+id/cardView"
+            android:background="@drawable/rounded"
+            android:text="Add"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="or"
+        android:textSize="18sp"
+        android:layout_below="@+id/inputData"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonTakePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="117dp"
+        android:background="@drawable/rounded"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:drawableLeft="@drawable/camera_icon"
+        android:text="Take a Photo"
+        android:layout_below="@+id/or"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/itemLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonTakePhoto"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageViewFromURL"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/itemLabel"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/nextVsPrev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewFromURL"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonPrevious"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:paddingEnd="35dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/rounded"
+            android:text="PREVIOUS"
+            android:drawableLeft="@drawable/previous_icon"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:paddingStart="45dp"
+            android:paddingEnd="17dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/rounded"
+            android:drawableRight="@drawable/next_icon"
+            android:text="NEXT"
+            android:textFontWeight="390"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/nextVsPrev"
+        android:background="@drawable/rounded"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:drawableLeft="@drawable/reset_icon"
+        android:paddingStart="127dp"
+        android:paddingEnd="127dp"
+        android:text="Reset data"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+</RelativeLayout>
